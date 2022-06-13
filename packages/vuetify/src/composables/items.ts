@@ -68,7 +68,7 @@ export function transformItem (props: Omit<ItemProps, 'items'>, item: any) {
     title: _props.title,
     value: _props.value,
     props: _props,
-    children: Array.isArray(children) ? transformItems(props, children) : undefined,
+    ...(Array.isArray(children) && { children: transformItems(props, children) }),
     originalItem: item,
   }
 }

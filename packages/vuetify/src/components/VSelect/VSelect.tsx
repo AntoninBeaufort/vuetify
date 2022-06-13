@@ -52,7 +52,7 @@ export const makeSelectProps = propsFactory({
   },
   openOnClear: Boolean,
 
-  ...makeItemsProps({ itemChildren: false }),
+  ...makeItemsProps({ itemChildren: 'children' }),
 }, 'select')
 
 type Primitive = string | number | boolean | symbol
