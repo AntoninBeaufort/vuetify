@@ -152,20 +152,23 @@ export const VField = genericComponent<new <T>() => {
         const duration = parseFloat(getComputedStyle(el).transitionDuration) * 1000
         const scale = parseFloat(getComputedStyle(targetEl).getPropertyValue('--v-field-label-scale'))
 
-        el.style.visibility = 'visible'
-        targetEl.style.visibility = 'hidden'
+        // they can be NaN if requested properties are not set
+        if (!isNaN(duration) && !isNaN(scale)) {
+          el.style.visibility = 'visible'
+          targetEl.style.visibility = 'hidden'
 
-        el.animate([
-          { transform: 'translate(0)' },
-          { transform: `translate(${x}px, ${y}px) scale(${scale})`, ...width },
-        ], {
-          duration,
-          easing: standardEasing,
-          direction: val ? 'normal' : 'reverse',
-        }).finished.then(() => {
-          el.style.removeProperty('visibility')
-          targetEl.style.removeProperty('visibility')
-        })
+          el.animate([
+            { transform: 'translate(0)' },
+            { transform: `translate(${x}px, ${y}px) scale(${scale})`, ...width },
+          ], {
+            duration,
+            easing: standardEasing,
+            direction: val ? 'normal' : 'reverse',
+          }).finished.then(() => {
+            el.style.removeProperty('visibility')
+            targetEl.style.removeProperty('visibility')
+          })
+        }
       }
     }, { flush: 'post' })
 
