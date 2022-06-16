@@ -83,7 +83,7 @@ Icons can be used for the primary content of a button. Use the **icon** prop to 
 
 #### Loaders
 
-Using the loading prop, you can notify a user that there is processing taking place. The default behavior is to use a `v-progress-circular` component but this can be customized.
+Using the loading prop, you can notify a user that there is processing taking place. The default behavior is to use a `v-progress-circular` component but this can be customized with the **loader** slot.
 
 <example file="v-btn/prop-loaders" />
 
