@@ -1,34 +1,7 @@
 {
-  "name": "vuetify",
-  "description": "Vue Material Component Framework",
-  "version": "3.0.0-beta.3",
-  "author": {
-    "name": "John Leider",
-    "email": "john@vuetifyjs.com"
-  },
-  "license": "MIT",
-  "homepage": "https://vuetifyjs.com",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vuetifyjs/vuetify.git",
-    "directory": "packages/vuetify"
-  },
-  "keywords": [
-    "vuetify",
-    "ui framework",
-    "component framework",
-    "ui library",
-    "component library",
-    "material components",
-    "vue framework"
-  ],
-  "bugs": {
-    "url": "https://issues.vuetifyjs.com"
-  },
-  "funding": {
-    "type": "github",
-    "url": "https://github.com/sponsors/johnleider"
-  },
+  "name": "@antoninbeaufort/vuetify",
+  "description": "Personal fork of Vue Material Component Framework",
+  "version": "3.0.0-beta.2.5",
   "main": "lib/framework.mjs",
   "module": "lib/framework.mjs",
   "jsdelivr": "dist/vuetify.js",
