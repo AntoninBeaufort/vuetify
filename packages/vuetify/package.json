@@ -1,7 +1,7 @@
 {
   "name": "@antoninbeaufort/vuetify",
   "description": "Personal fork of Vue Material Component Framework",
-  "version": "3.0.0-beta.4.1",
+  "version": "3.0.0-beta.4.2",
   "main": "lib/framework.mjs",
   "module": "lib/framework.mjs",
   "jsdelivr": "dist/vuetify.js",
